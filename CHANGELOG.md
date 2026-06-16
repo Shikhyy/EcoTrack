@@ -2,3 +2,4 @@
 - [2026-06-16T10:38:38.059Z] feat: setup basic layout and globals
 - [2026-06-16T14:10:04.505Z] docs: update project roadmap in changelog
 - [2026-06-16T14:30:16.293Z] feat: add landing page skeleton
+- [2026-06-16T16:26:45.273Z] chore: update dependencies

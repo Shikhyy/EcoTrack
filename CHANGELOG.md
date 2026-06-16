@@ -1,1 +1,2 @@
 - [2026-06-16T13:43:07.732Z] chore: initial project setup
+- [2026-06-16T10:38:38.059Z] feat: setup basic layout and globals

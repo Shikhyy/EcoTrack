@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+:root {
+  --background: #F4F3F0;
+  --foreground: #111111;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  margin: 0;
+  /* overflow: hidden; Removed to allow scrolling for the bird animation */
+}

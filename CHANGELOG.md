@@ -7,3 +7,4 @@
 - [2026-06-16T18:53:47.910Z] style: polish navigation styling
 - [2026-06-16T23:14:56.037Z] feat: import 3d nature assets
 - [2026-06-17T01:01:23.888Z] docs: detail asset optimization
+- [2026-06-16T22:04:58.005Z] feat: add animated bird video assets

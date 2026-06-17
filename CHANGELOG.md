@@ -23,3 +23,4 @@
 - [2026-06-17T19:15:48.753Z] style: improve dashboard layout
 - [2026-06-17T22:52:33.110Z] feat: integrate Dashboard tab
 - [2026-06-17T20:14:44.361Z] fix: resolve recharts container width issue
+- [2026-06-17T22:47:16.490Z] feat: add community tab base

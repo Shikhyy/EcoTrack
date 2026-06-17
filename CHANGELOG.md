@@ -11,3 +11,4 @@
 - [2026-06-17T01:28:30.107Z] feat: create BirdSequenceOverlay component
 - [2026-06-17T01:01:41.590Z] fix: bird positioning offset
 - [2026-06-17T05:32:00.892Z] refactor: optimize video loading
+- [2026-06-17T03:19:51.312Z] feat: create landing hero copy

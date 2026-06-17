@@ -16,3 +16,4 @@
 - [2026-06-17T09:57:09.971Z] feat: create emissions calculation logic
 - [2026-06-17T10:14:33.699Z] test: setup jest for emissions testing
 - [2026-06-17T08:29:04.366Z] feat: add facts constants
+- [2026-06-17T11:08:01.087Z] feat: create AppInterface container

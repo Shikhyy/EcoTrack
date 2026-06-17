@@ -13,3 +13,4 @@
 - [2026-06-17T05:32:00.892Z] refactor: optimize video loading
 - [2026-06-17T03:19:51.312Z] feat: create landing hero copy
 - [2026-06-17T06:02:49.631Z] style: add glassmorphic utilities to tailwind
+- [2026-06-17T09:57:09.971Z] feat: create emissions calculation logic

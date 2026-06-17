@@ -9,3 +9,4 @@
 - [2026-06-17T01:01:23.888Z] docs: detail asset optimization
 - [2026-06-16T22:04:58.005Z] feat: add animated bird video assets
 - [2026-06-17T01:28:30.107Z] feat: create BirdSequenceOverlay component
+- [2026-06-17T01:01:41.590Z] fix: bird positioning offset

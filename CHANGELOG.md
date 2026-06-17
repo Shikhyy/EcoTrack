@@ -6,3 +6,4 @@
 - [2026-06-16T17:40:30.203Z] feat: implement global navigation
 - [2026-06-16T18:53:47.910Z] style: polish navigation styling
 - [2026-06-16T23:14:56.037Z] feat: import 3d nature assets
+- [2026-06-17T01:01:23.888Z] docs: detail asset optimization

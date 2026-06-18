@@ -39,3 +39,4 @@
 - [2026-06-18T18:35:03.183Z] perf: optimize image loading
 - [2026-06-18T17:30:47.407Z] chore: tweak typescript config
 - [2026-06-18T20:29:51.726Z] test: add missing coverage
+- [2026-06-18T21:13:02.661Z] refactor: simplify component structure

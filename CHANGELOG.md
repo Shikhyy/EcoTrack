@@ -27,3 +27,4 @@
 - [2026-06-17T22:45:23.767Z] refactor: optimize ThreeJS canvas rendering
 - [2026-06-17T23:08:20.373Z] feat: set up API routes
 - [2026-06-17T23:47:40.432Z] feat: create agent logic wrapper
+- [2026-06-18T04:17:55.844Z] feat: integrate Groq LLM for EcoGuide

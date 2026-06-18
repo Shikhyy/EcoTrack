@@ -28,3 +28,4 @@
 - [2026-06-17T23:08:20.373Z] feat: set up API routes
 - [2026-06-17T23:47:40.432Z] feat: create agent logic wrapper
 - [2026-06-18T04:17:55.844Z] feat: integrate Groq LLM for EcoGuide
+- [2026-06-18T06:09:47.926Z] fix: api response parsing logic

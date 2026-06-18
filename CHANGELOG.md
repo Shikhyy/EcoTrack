@@ -41,3 +41,4 @@
 - [2026-06-18T20:29:51.726Z] test: add missing coverage
 - [2026-06-18T21:13:02.661Z] refactor: simplify component structure
 - [2026-06-18T20:09:18.322Z] style: remove console logs
+- [2026-06-18T20:42:11.725Z] chore: remove dead code

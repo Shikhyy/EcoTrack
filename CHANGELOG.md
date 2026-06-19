@@ -52,3 +52,4 @@
 - [2026-06-19T11:09:36.734Z] chore: tweak typescript config
 - [2026-06-19T11:18:24.653Z] refactor: simplify component structure
 - [2026-06-19T14:58:13.519Z] refactor: split large component into smaller parts
+- [2026-06-19T17:31:08.930Z] refactor: clean up unused variables

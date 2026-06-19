@@ -50,3 +50,4 @@
 - [2026-06-19T09:29:36.261Z] refactor: split large component into smaller parts
 - [2026-06-19T10:28:59.718Z] style: improve mobile responsiveness
 - [2026-06-19T11:09:36.734Z] chore: tweak typescript config
+- [2026-06-19T11:18:24.653Z] refactor: simplify component structure

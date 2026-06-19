@@ -45,3 +45,4 @@
 - [2026-06-19T00:06:21.659Z] docs: clarify readme setup instructions
 - [2026-06-19T03:47:28.965Z] chore: remove dead code
 - [2026-06-19T03:09:46.828Z] perf: optimize image loading
+- [2026-06-19T05:47:27.055Z] refactor: clean up unused variables

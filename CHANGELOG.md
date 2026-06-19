@@ -44,3 +44,4 @@
 - [2026-06-18T20:42:11.725Z] chore: remove dead code
 - [2026-06-19T00:06:21.659Z] docs: clarify readme setup instructions
 - [2026-06-19T03:47:28.965Z] chore: remove dead code
+- [2026-06-19T03:09:46.828Z] perf: optimize image loading

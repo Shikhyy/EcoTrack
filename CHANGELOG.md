@@ -69,3 +69,4 @@
 - [2026-06-20T07:48:01.734Z] docs: clarify readme setup instructions
 - [2026-06-20T10:01:10.095Z] test: add missing coverage
 - [2026-06-20T11:00:53.387Z] fix: adjust padding on mobile screens
+- [2026-06-20T16:46:44.857Z] chore: remove dead code

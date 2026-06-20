@@ -60,3 +60,4 @@
 - [2026-06-19T20:18:43.554Z] chore: format code
 - [2026-06-19T21:01:41.291Z] perf: lazy load heavy modules
 - [2026-06-20T02:35:55.620Z] style: improve mobile responsiveness
+- [2026-06-20T01:40:30.013Z] test: add missing coverage

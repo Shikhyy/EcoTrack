@@ -76,3 +76,4 @@
 - [2026-06-20T20:18:08.543Z] refactor: split large component into smaller parts
 - [2026-06-20T23:05:45.626Z] style: enforce consistent quotes
 - [2026-06-21T00:59:47.470Z] chore: tweak typescript config
+- [2026-06-20T22:19:14.904Z] test: add missing coverage

@@ -77,3 +77,4 @@
 - [2026-06-20T23:05:45.626Z] style: enforce consistent quotes
 - [2026-06-21T00:59:47.470Z] chore: tweak typescript config
 - [2026-06-20T22:19:14.904Z] test: add missing coverage
+- [2026-06-20T22:32:44.858Z] fix: correct typescript interfaces

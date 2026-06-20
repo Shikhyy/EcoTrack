@@ -67,3 +67,4 @@
 - [2026-06-20T07:16:10.703Z] fix: correct typescript interfaces
 - [2026-06-20T05:55:43.753Z] style: enforce consistent quotes
 - [2026-06-20T07:48:01.734Z] docs: clarify readme setup instructions
+- [2026-06-20T10:01:10.095Z] test: add missing coverage

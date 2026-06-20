@@ -74,3 +74,4 @@
 - [2026-06-20T16:32:09.083Z] chore: update minor deps
 - [2026-06-20T20:49:45.410Z] fix: resolve hydration warning
 - [2026-06-20T20:18:08.543Z] refactor: split large component into smaller parts
+- [2026-06-20T23:05:45.626Z] style: enforce consistent quotes

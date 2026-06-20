@@ -72,3 +72,4 @@
 - [2026-06-20T16:46:44.857Z] chore: remove dead code
 - [2026-06-20T15:35:25.138Z] style: enforce consistent quotes
 - [2026-06-20T16:32:09.083Z] chore: update minor deps
+- [2026-06-20T20:49:45.410Z] fix: resolve hydration warning

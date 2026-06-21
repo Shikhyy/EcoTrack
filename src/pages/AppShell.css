@@ -1,0 +1,90 @@
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: var(--color-forest-dark);
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  background: rgba(2, 15, 10, 0.8);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid var(--color-surface);
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--color-mint);
+}
+
+.live-score {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  background: var(--color-surface);
+  padding: 6px 12px;
+  border-radius: var(--radius-pill);
+}
+
+.score-value {
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+.score-unit {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+.app-content {
+  flex: 1;
+  padding: 24px;
+  padding-bottom: 100px; /* Space for nav */
+}
+
+.app-nav {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 600px;
+  background: var(--color-forest-darker);
+  border-top: 1px solid var(--color-surface);
+  padding: 12px 24px 24px;
+  justify-content: space-between;
+  z-index: 100;
+}
+
+.nav-btn {
+  background: transparent;
+  border: none;
+  color: var(--color-cloud);
+  opacity: 0.6;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 8px;
+  transition: all var(--duration-fast) ease;
+}
+
+.nav-btn.active {
+  opacity: 1;
+  color: var(--color-mint);
+}
+
+.placeholder {
+  text-align: center;
+  padding: 40px;
+  opacity: 0.5;
+}

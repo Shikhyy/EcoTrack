@@ -85,3 +85,4 @@
 - [2026-06-21T04:48:57.761Z] perf: optimize image loading
 - [2026-06-21T09:28:07.937Z] docs: update changelog
 - [2026-06-21T07:29:02.020Z] refactor: clean up unused variables
+- [2026-06-21T09:51:38.372Z] fix: resolve hydration warning

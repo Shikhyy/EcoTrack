@@ -125,11 +125,13 @@ export default function AIAssistant({ values, score, acceptedChallenges }) {
               onKeyDown={e => e.key === 'Enter' && handleSend(input)}
               placeholder="Ask EcoGuide anything..."
               disabled={isTyping}
+              aria-label="Message to EcoGuide"
               className="w-full bg-white border border-black/10 rounded-full pl-6 pr-16 py-4 text-lg text-[#1c1c1c] placeholder-black/30 outline-none focus:ring-2 focus:ring-[#1c1c1c] focus:border-transparent transition-all shadow-sm disabled:opacity-50"
             />
             <button 
               onClick={() => handleSend(input)}
               disabled={isTyping || !input.trim()}
+              aria-label="Send message"
               className="absolute right-3 bg-[#1c1c1c] text-white w-10 h-10 rounded-full flex items-center justify-center disabled:opacity-50 disabled:bg-black/20 hover:scale-105 transition-all shadow-md"
             >
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 ml-1">

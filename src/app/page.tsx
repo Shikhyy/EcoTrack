@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import GlobalNav from "../components/GlobalNav";
 import AppInterface from "../components/AppInterface";
@@ -56,10 +57,8 @@ export default function Home() {
             animate={{ opacity: loaded ? 0.3 : 0 }}
             transition={{ duration: 2, delay: 0.5 }}
           >
-            <motion.img 
-              src="/leaf-shadows.png" 
-              alt="Leaf shadows" 
-              className="w-full h-full object-cover object-top"
+            <motion.div
+              className="relative w-full h-full"
               animate={{ 
                 x: ["0%", "-1%", "0.5%", "0%"],
                 y: ["0%", "0.5%", "-0.5%", "0%"],
@@ -69,7 +68,15 @@ export default function Home() {
                 repeat: Infinity, 
                 ease: "easeInOut" 
               }}
-            />
+            >
+              <Image 
+                src="/leaf-shadows.png" 
+                alt="Leaf shadows" 
+                fill
+                priority
+                className="object-cover object-top"
+              />
+            </motion.div>
           </motion.div>
 
           {/* E Image with Transparent Background */}
@@ -78,10 +85,12 @@ export default function Home() {
             style={{ y: imageY, scale: imageScale, transformOrigin: "bottom center" }}
           >
             <div className="relative w-full max-w-[85vh] aspect-square">
-              <img
+              <Image
                 src="/eco_letter_e_1781797380669-removebg-preview.png"
                 alt="EcoTrack Mossy Letter"
-                className="absolute inset-0 w-full h-full object-contain drop-shadow-[0_40px_80px_rgba(0,0,0,0.35)]"
+                fill
+                priority
+                className="object-contain drop-shadow-[0_40px_80px_rgba(0,0,0,0.35)]"
               />
               {/* Bird sequence positioned on the top right ledge of the E */}
               <BirdSequenceOverlay className="absolute -top-[45%] -right-[38%] w-[100%] h-[100%]" />

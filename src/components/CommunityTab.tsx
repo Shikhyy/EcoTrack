@@ -189,7 +189,12 @@ export default function CommunityTab({ acceptedChallenges, setAcceptedChallenges
                         <span className="text-xs bg-[#2d8a4e] px-2 py-1 rounded-md font-bold">{init.distance}</span>
                       </div>
                       <p className="text-sm text-white/60 mb-3">{init.description}</p>
-                      <button className="text-sm font-bold text-[#2d8a4e] hover:text-white transition-colors">RSVP Now &rarr;</button>
+                      <button 
+                        className="text-sm font-bold text-[#2d8a4e] hover:text-white transition-colors"
+                        aria-label={`RSVP to ${init.title}`}
+                      >
+                        RSVP Now &rarr;
+                      </button>
                     </div>
                   ))
                 )}

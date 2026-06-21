@@ -87,3 +87,4 @@
 - [2026-06-21T07:29:02.020Z] refactor: clean up unused variables
 - [2026-06-21T09:51:38.372Z] fix: resolve hydration warning
 - [2026-06-21T10:37:49.381Z] docs: add comprehensive readme and diagrams
+- [2026-06-21T17:12:10.783Z] chore: accessibility improvements and aria labels

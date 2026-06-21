@@ -1,5 +1,9 @@
-import { treesNeeded } from "./emissions";
+import { treesNeeded, totalScore } from "./emissions";
 
+/**
+ * Rules for generating personalized sustainability tips.
+ * Each rule has a condition function that receives the current slider values.
+ */
 const TIP_RULES = [
   {
     key: "public_transit",
@@ -7,6 +11,7 @@ const TIP_RULES = [
     title: "Take public transit",
     desc: "Switching to bus/metro 3×/week saves ~60 kg CO₂/month",
     impact: "High",
+    /** @param {Record<string,number>} v */
     condition: (v) => v.transport > 150,
   },
   {
@@ -15,6 +20,7 @@ const TIP_RULES = [
     title: "Try plant-based days",
     desc: "2 meat-free days/week cuts diet emissions by ~25%",
     impact: "High",
+    /** @param {Record<string,number>} v */
     condition: (v) => v.diet > 60,
   },
   {
@@ -23,6 +29,7 @@ const TIP_RULES = [
     title: "Switch to LEDs",
     desc: "Full home LED upgrade saves ~15 kg CO₂ monthly",
     impact: "Medium",
+    /** @param {Record<string,number>} v */
     condition: (v) => v.energy > 70,
   },
   {
@@ -39,18 +46,25 @@ const TIP_RULES = [
     title: "Buy secondhand",
     desc: "Each secondhand purchase avoids ~5 kg CO₂ on average",
     impact: "Low",
+    /** @param {Record<string,number>} v */
     condition: (v) => v.shopping > 40,
   },
   {
     key: "tree_offset",
     icon: "🌱", color: "var(--color-mint)",
     title: "Offset with trees",
-    desc: (v) => `Plant ~${treesNeeded(v.total)} trees/year to go carbon neutral`,
+    /** @param {Record<string,number>} v - Computes total from all values */
+    desc: (v) => `Plant ~${treesNeeded(totalScore(v))} trees/year to go carbon neutral`,
     impact: "Action",
     condition: () => true,
   },
 ];
 
+/**
+ * Returns a filtered and resolved list of personalized tips based on current slider values.
+ * @param {Record<string, number>} values - Current slider values from TrackTab
+ * @returns {Array<{key: string, icon: string, title: string, desc: string, impact: string, color: string}>}
+ */
 export function getPersonalizedTips(values) {
   return TIP_RULES
     .filter(rule => rule.condition(values))

@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip as RechartsTooltip, Legend } from 'recharts';
 import EarthGlobe from './nature/EarthGlobe';
 import StatCard from './dashboard/StatCard';
@@ -18,14 +18,28 @@ export default function DashboardTab({ values, score, onNext }) {
     return () => clearInterval(interval);
   }, []);
 
-  const tier = getTier(score);
-  const color = tierColor(tier);
-  const statusLabel = tier === 'low' ? 'Eco Hero' : tier === 'mid' ? 'Aware' : 'At Risk';
+  // Memoize all derived data so they only recalculate when score/values change
+  const tier = useMemo(() => getTier(score), [score]);
+  const color = useMemo(() => tierColor(tier), [tier]);
+  const statusLabel = useMemo(
+    () => (tier === 'low' ? 'Eco Hero' : tier === 'mid' ? 'Aware' : 'At Risk'),
+    [tier]
+  );
+  const trees = useMemo(() => treesNeeded(score), [score]);
+  const flights = useMemo(() => flightEquivalent(score), [score]);
+  const vsGlobal = useMemo(() => vsGlobalAverage(score), [score]);
+  const energyShare = useMemo(
+    () => (score > 0 ? ((values.energy / score) * 100).toFixed(0) : 0),
+    [values.energy, score]
+  );
 
-  const trees = treesNeeded(score);
-  const flights = flightEquivalent(score);
-  const vsGlobal = vsGlobalAverage(score);
-  const energyShare = score > 0 ? ((values.energy / score) * 100).toFixed(0) : 0;
+  // Memoize chart data array
+  const chartData = useMemo(() => [
+    { name: 'Transport', value: values.transport || 1, color: '#1a6b8a' },
+    { name: 'Energy', value: values.energy || 1, color: '#f0a500' },
+    { name: 'Diet', value: values.diet || 1, color: '#2d8a4e' },
+    { name: 'Shopping', value: values.shopping || 1, color: '#bb86fc' },
+  ], [values.transport, values.energy, values.diet, values.shopping]);
 
   return (
     <div className="flex flex-col h-full max-w-5xl mx-auto">
@@ -41,7 +55,7 @@ export default function DashboardTab({ values, score, onNext }) {
             </div>
           </div>
           <div className="w-full h-full scale-110">
-            <EarthGlobe tier={tier} color={color} statusLabel={statusLabel} />
+            <EarthGlobe color={color} statusLabel={statusLabel} />
           </div>
         </div>
 
@@ -70,22 +84,14 @@ export default function DashboardTab({ values, score, onNext }) {
           <ResponsiveContainer width="100%" height="100%">
             <PieChart>
               <Pie
-                data={[
-                  { name: 'Transport', value: values.transport || 1, color: '#1a6b8a' },
-                  { name: 'Energy', value: values.energy || 1, color: '#f0a500' },
-                  { name: 'Food', value: values.food || 1, color: '#2d8a4e' },
-                ]}
+                data={chartData}
                 innerRadius={70}
                 outerRadius={110}
                 paddingAngle={5}
                 dataKey="value"
                 stroke="none"
               >
-                {[
-                  { name: 'Transport', value: values.transport, color: '#1a6b8a' },
-                  { name: 'Energy', value: values.energy, color: '#f0a500' },
-                  { name: 'Food', value: values.food, color: '#2d8a4e' },
-                ].map((entry, index) => (
+                {chartData.map((entry, index) => (
                   <Cell key={`cell-${index}`} fill={entry.color} />
                 ))}
               </Pie>

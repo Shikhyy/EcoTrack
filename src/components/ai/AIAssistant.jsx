@@ -1,5 +1,5 @@
 "use client";
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useCallback } from 'react';
 import { askEcoGuide } from '../../lib/agent';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -12,15 +12,15 @@ export default function AIAssistant({ values, score, acceptedChallenges }) {
   const [error, setError] = useState(null);
   const messagesEndRef = useRef(null);
 
-  const scrollToBottom = () => {
+  const scrollToBottom = useCallback(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
+  }, []);
 
   useEffect(() => {
     scrollToBottom();
-  }, [history, isTyping]);
+  }, [history, isTyping, scrollToBottom]);
 
-  const handleSend = async (messageText) => {
+  const handleSend = useCallback(async (messageText) => {
     if (!messageText.trim()) return;
 
     const userMsg = messageText;
@@ -40,7 +40,7 @@ export default function AIAssistant({ values, score, acceptedChallenges }) {
     } finally {
       setIsTyping(false);
     }
-  };
+  }, [score, values, acceptedChallenges, history]);
 
   return (
     <div className="flex flex-col h-full max-w-4xl mx-auto">

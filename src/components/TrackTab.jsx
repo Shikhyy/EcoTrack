@@ -1,12 +1,14 @@
 "use client";
+import { useCallback } from 'react';
 import { SLIDERS } from '../constants/sliders';
 import { barColor } from '../lib/emissions';
 import { motion } from 'framer-motion';
 
 export default function TrackTab({ values, setValues, onNext }) {
-  const handleChange = (key, val) => {
+  // useCallback prevents a new function reference on every render
+  const handleChange = useCallback((key, val) => {
     setValues(prev => ({ ...prev, [key]: Number(val) }));
-  };
+  }, [setValues]);
 
   return (
     <div className="flex flex-col h-full max-w-4xl mx-auto">

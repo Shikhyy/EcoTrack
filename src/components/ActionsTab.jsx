@@ -1,10 +1,12 @@
 "use client";
+import { useMemo } from 'react';
 import { getPersonalizedTips } from '../lib/tipsEngine';
 import TipCard from './tips/TipCard';
 import { motion } from 'framer-motion';
 
 export default function ActionsTab({ values, score }) {
-  const tips = getPersonalizedTips(values, score);
+  // Memoize tips so they only recalculate when values change, not on every parent render
+  const tips = useMemo(() => getPersonalizedTips(values, score), [values, score]);
 
   return (
     <div className="flex flex-col h-full max-w-4xl mx-auto">

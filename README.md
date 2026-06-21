@@ -7,6 +7,8 @@
 ![Framer Motion](https://img.shields.io/badge/Framer_Motion-black?style=for-the-badge&logo=framer)
 ![Groq](https://img.shields.io/badge/Groq-AI-f55036?style=for-the-badge)
 
+**🌟 Live Demo:** [https://ecologytrack.vercel.app/](https://ecologytrack.vercel.app/)
+
 EcoTrack is a next-generation Carbon Footprint Awareness Platform designed to help individuals understand, track, and reduce their carbon footprint through highly interactive 3D visualizations and personalized AI insights.
 
 ## Problem Statement & Vertical

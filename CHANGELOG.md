@@ -83,3 +83,4 @@
 - [2026-06-21T07:08:18.116Z] chore: remove dead code
 - [2026-06-21T03:31:48.051Z] style: enforce consistent quotes
 - [2026-06-21T04:48:57.761Z] perf: optimize image loading
+- [2026-06-21T09:28:07.937Z] docs: update changelog

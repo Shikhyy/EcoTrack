@@ -81,3 +81,4 @@
 - [2026-06-21T04:06:35.929Z] chore: update minor deps
 - [2026-06-21T02:18:38.483Z] style: fix linting warnings
 - [2026-06-21T07:08:18.116Z] chore: remove dead code
+- [2026-06-21T03:31:48.051Z] style: enforce consistent quotes

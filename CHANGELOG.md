@@ -78,3 +78,4 @@
 - [2026-06-21T00:59:47.470Z] chore: tweak typescript config
 - [2026-06-20T22:19:14.904Z] test: add missing coverage
 - [2026-06-20T22:32:44.858Z] fix: correct typescript interfaces
+- [2026-06-21T04:06:35.929Z] chore: update minor deps

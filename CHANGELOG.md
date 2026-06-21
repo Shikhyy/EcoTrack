@@ -79,3 +79,4 @@
 - [2026-06-20T22:19:14.904Z] test: add missing coverage
 - [2026-06-20T22:32:44.858Z] fix: correct typescript interfaces
 - [2026-06-21T04:06:35.929Z] chore: update minor deps
+- [2026-06-21T02:18:38.483Z] style: fix linting warnings

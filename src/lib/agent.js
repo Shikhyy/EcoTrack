@@ -10,7 +10,7 @@ export async function askEcoGuide(context, history, userMessage) {
     try {
       const data = await res.json();
       if (data.error) errorMessage = data.error;
-    } catch (e) {
+    } catch {
       // Ignore JSON parse errors if response is not JSON
     }
     throw new Error(errorMessage);

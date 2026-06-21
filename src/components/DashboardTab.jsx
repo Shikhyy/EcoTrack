@@ -114,7 +114,7 @@ export default function DashboardTab({ values, score, onNext }) {
               exit={{ opacity: 0, y: -20 }}
               className="text-lg font-medium text-black/60 italic absolute inset-0 flex items-center"
             >
-              "{FACTS[factIndex]}"
+              &quot;{FACTS[factIndex]}&quot;
             </motion.p>
           </AnimatePresence>
         </div>

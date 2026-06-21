@@ -7,7 +7,7 @@ const TIP_RULES = [
     title: "Take public transit",
     desc: "Switching to bus/metro 3×/week saves ~60 kg CO₂/month",
     impact: "High",
-    condition: (v, score) => v.transport > 150,
+    condition: (v) => v.transport > 150,
   },
   {
     key: "plant_based_days",
@@ -45,17 +45,17 @@ const TIP_RULES = [
     key: "tree_offset",
     icon: "🌱", color: "var(--color-mint)",
     title: "Offset with trees",
-    desc: (v, score) => `Plant ~${treesNeeded(score)} trees/year to go carbon neutral`,
+    desc: (v) => `Plant ~${treesNeeded(v.total)} trees/year to go carbon neutral`,
     impact: "Action",
     condition: () => true,
   },
 ];
 
-export function getPersonalizedTips(values, score) {
+export function getPersonalizedTips(values) {
   return TIP_RULES
-    .filter(rule => rule.condition(values, score))
+    .filter(rule => rule.condition(values))
     .map(rule => ({
       ...rule,
-      desc: typeof rule.desc === "function" ? rule.desc(values, score) : rule.desc,
+      desc: typeof rule.desc === "function" ? rule.desc(values) : rule.desc,
     }));
 }

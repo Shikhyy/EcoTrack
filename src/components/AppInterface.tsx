@@ -6,11 +6,16 @@ import AIAssistant from "./ai/AIAssistant";
 import CommunityTab from "./CommunityTab";
 
 export default function AppInterface() {
-  const [values, setValues] = useState({ energy: 200, transport: 300, food: 150 });
   const [activeTab, setActiveTab] = useState("track");
-  const [totalScore, setTotalScore] = useState(0);
   const [acceptedChallenges, setAcceptedChallenges] = useState<number[]>([]);
-  const [userContext, setUserContext] = useState({});
+  
+  // State to hold the current values from Track Tab
+  const [values, setValues] = useState({
+    transport: 20,
+    diet: 50,
+    energy: 30,
+    shopping: 40
+  });
   
   const score = Object.values(values).reduce((a, b) => a + b, 0);
 

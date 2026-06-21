@@ -25,7 +25,8 @@ export default function Home() {
   const imageScale = useTransform(scrollYProgress, [0, 0.8], [0.7, 1.05]);
 
   useEffect(() => {
-    setLoaded(true);
+    const timer = setTimeout(() => setLoaded(true), 10);
+    return () => clearTimeout(timer);
   }, []);
 
   return (
@@ -166,7 +167,7 @@ export default function Home() {
           <div>
             <h2 className="text-4xl md:text-5xl font-light tracking-tight text-[#1c1c1c] mb-6">Meet <span className="font-serif italic text-black/50">EcoGuide AI</span></h2>
             <p className="text-lg text-[#1c1c1c]/70 leading-relaxed mb-8">
-              Powered by Groq's blazing-fast Llama 3 API, the EcoGuide AI acts as your personal sustainability coach. It analyzes your active pledges and footprint score to offer custom, actionable advice on reducing your emissions.
+              Powered by Groq&apos;s blazing-fast Llama 3 API, the EcoGuide AI acts as your personal sustainability coach. It analyzes your active pledges and footprint score to offer custom, actionable advice on reducing your emissions.
             </p>
           </div>
           <div className="bg-[#1c1c1c] text-white rounded-[40px] aspect-square flex items-center justify-center p-8 shadow-xl overflow-hidden relative">

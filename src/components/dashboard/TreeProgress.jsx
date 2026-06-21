@@ -1,5 +1,5 @@
 "use client";
-import { CATEGORY_MAX, barColor } from '../../lib/emissions';
+import { barColor } from '../../lib/emissions';
 import { SLIDERS } from '../../constants/sliders';
 import { motion } from 'framer-motion';
 

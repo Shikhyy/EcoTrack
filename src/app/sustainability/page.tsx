@@ -50,7 +50,7 @@ export default function SustainabilityPage() {
               <h2 className="text-4xl font-medium mb-8">Scope 1 & 2 Emissions</h2>
               <div className="text-7xl font-light mb-4 text-emerald-400">0.0<span className="text-3xl text-white/40 ml-2">tCO2e</span></div>
               <p className="text-xl text-white/60 font-light leading-relaxed">
-                By operating entirely on renewable energy grids and maintaining a fully remote workforce, we've eliminated our direct operational emissions.
+                By operating entirely on renewable energy grids and maintaining a fully remote workforce, we&apos;ve eliminated our direct operational emissions.
               </p>
             </motion.div>
 

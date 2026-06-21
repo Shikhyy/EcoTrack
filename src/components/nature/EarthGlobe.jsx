@@ -2,12 +2,12 @@
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, Float } from "@react-three/drei";
 import { useRef } from "react";
-import * as THREE from "three";
+
 
 function LowPolyTree({ color }) {
   const group = useRef();
   
-  useFrame((state) => {
+  useFrame(() => {
     group.current.rotation.y += 0.005;
   });
 
@@ -40,7 +40,7 @@ function LowPolyTree({ color }) {
   );
 }
 
-export default function EarthGlobe({ tier, color }) {
+export default function EarthGlobe({ color }) {
   return (
     <div className="w-full h-full cursor-grab active:cursor-grabbing">
       <Canvas shadows camera={{ position: [0, 2, 6], fov: 45 }}>
